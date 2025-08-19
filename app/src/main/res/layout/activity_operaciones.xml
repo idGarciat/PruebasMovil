@@ -8,7 +8,7 @@
     tools:context=".OperacionesActivity">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtVtitulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Operaciones Varias"
@@ -28,7 +28,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.100"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/txtVtitulo"
         app:layout_constraintVertical_bias="0.050" />
 
     <Button
@@ -40,8 +40,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.092"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.200" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonOpImaginarios"
+        app:layout_constraintVertical_bias="0.050" />
+
+    <Button
+        android:id="@+id/buttonDesarrollo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Desarrollo de operaciones \n +, -, *, /"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.100"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRecursividad"
+        app:layout_constraintVertical_bias="0.050" />
 
 
 

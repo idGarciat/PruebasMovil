@@ -92,6 +92,31 @@
         app:layout_constraintTop_toBottomOf="@+id/btnPotencia"
         app:layout_constraintVertical_bias="0.100" />
 
+    <Button
+        android:id="@+id/btnVerProc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ver procedimiento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.150"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Resul"
+        app:layout_constraintVertical_bias="0.100" />
+
+    <TextView
+        android:id="@+id/TxtVProc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aqui ira el procedimiento"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.150"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVerProc"
+        app:layout_constraintVertical_bias="0.300" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
