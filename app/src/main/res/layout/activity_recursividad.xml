@@ -60,7 +60,7 @@
         android:id="@+id/btnMulti"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular Multiplicacion"
+        android:text="Calcular \n Multiplicacion"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.150"
@@ -80,16 +80,28 @@
         app:layout_constraintTop_toBottomOf="@+id/btnMulti"
         app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/Resul"
+    <Button
+        android:id="@+id/btnFractal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Resultado"
+        android:text="Calcular Fractal(?"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.150"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPotencia"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/Resul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resultado:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.150"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnFractal"
         app:layout_constraintVertical_bias="0.100" />
 
     <Button

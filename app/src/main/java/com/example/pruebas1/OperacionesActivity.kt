@@ -22,21 +22,26 @@ class OperacionesActivity : AppCompatActivity() {
         }
 
 
-        val buttonRecursividadActivity: Button = findViewById(R.id.buttonRecursividad)
         val buttonComplejosActivity: Button = findViewById(R.id.buttonOpImaginarios)
+        val buttonRecursividadActivity: Button = findViewById(R.id.buttonRecursividad)
+        val buttonsDesOp: Button = findViewById(R.id.buttonDesarrollo)
 
 
-
-        buttonRecursividadActivity.setOnClickListener {
-            val intent = Intent(this, RecursividadActivity::class.java)
-            startActivity(intent)
-        }
 
         buttonComplejosActivity.setOnClickListener {
             val intent = Intent(this, OpImaginarios::class.java)
             startActivity(intent)
         }
 
+        buttonRecursividadActivity.setOnClickListener {
+            val intent = Intent(this, RecursividadActivity::class.java)
+            startActivity(intent)
+        }
+
+        buttonsDesOp.setOnClickListener {
+            val intent = Intent(this, DesarrolloActivity::class.java)
+            startActivity(intent)
+        }
 
 
 

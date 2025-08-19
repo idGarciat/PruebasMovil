@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pruebas1">
         <activity
+            android:name=".DesarrolloActivity"
+            android:exported="false" />
+        <activity
             android:name=".OpImaginarios"
             android:exported="false" />
         <activity
