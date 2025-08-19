@@ -23,6 +23,7 @@ class RecursividadActivity : AppCompatActivity() {
         val btnFactorial: Button = findViewById(R.id.btnFactorial)
         val btnSuma: Button = findViewById(R.id.btnSuma)
         val btnMulti: Button = findViewById(R.id.btnMulti)
+        val btnPotencia: Button = findViewById(R.id.btnPotencia)
 
         val Num1: EditText = findViewById(R.id.Num1)
         val Num2: EditText = findViewById(R.id.Num2)
@@ -32,10 +33,9 @@ class RecursividadActivity : AppCompatActivity() {
         btnFactorial.setOnClickListener {
 
             val num1 = Num1.text.toString().toInt()
-            val num2 = Num2.text.toString().toInt()
 
             val recursividad = Recursividad()
-            val resultado = recursividad.Potencia(num1, num2)
+            val resultado = recursividad.factorial(num1)
             Resultado.text = "Resultado: $resultado"
         }
 
@@ -45,7 +45,7 @@ class RecursividadActivity : AppCompatActivity() {
             val num2 = Num2.text.toString().toInt()
 
             val recursividad = Recursividad()
-            val resultado = recursividad.SumaRecursiva(num1, num2)
+            val resultado = recursividad.sumaRecursiva(num1, num2)
             Resultado.text = "Resultado: $resultado"
         }
 
@@ -55,9 +55,19 @@ class RecursividadActivity : AppCompatActivity() {
             val num2 = Num2.text.toString().toInt()
 
             val recursividad = Recursividad()
-            val resultado = recursividad.MultiRecursiva(num1, num2)
+            val resultado = recursividad.multiRecursiva(num1, num2)
             Resultado.text = "Resultado: $resultado"
 
+        }
+
+        btnPotencia.setOnClickListener {
+
+            val num1 = Num1.text.toString().toInt()
+            val num2 = Num2.text.toString().toInt()
+
+            val recursividad = Recursividad()
+            val resultado = recursividad.potencia(num1, num2)
+            Resultado.text = "Resultado: $resultado"
         }
 
 
