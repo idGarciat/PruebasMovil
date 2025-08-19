@@ -7,30 +7,30 @@
     android:layout_height="match_parent"
     tools:context=".RecursividadActivity">
 
+
     <EditText
         android:id="@+id/Num1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
         android:hint="Numero 1"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.100"
+        app:layout_constraintHorizontal_bias="0.200"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100" />
 
     <EditText
         android:id="@+id/Num2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:hint="Numero 2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.700"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.050" />
+        app:layout_constraintVertical_bias="0.100" />
 
     <Button
         android:id="@+id/btnFactorial"
@@ -45,19 +45,6 @@
         app:layout_constraintVertical_bias="0.200" />
 
     <Button
-        android:id="@+id/btnPotencia"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calcular potencia"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.150"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMulti"
-        app:layout_constraintVertical_bias="0.200" />
-
-
-    <Button
         android:id="@+id/btnSuma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -67,7 +54,7 @@
         app:layout_constraintHorizontal_bias="0.150"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnFactorial"
-        app:layout_constraintVertical_bias="0.200" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnMulti"
@@ -79,7 +66,19 @@
         app:layout_constraintHorizontal_bias="0.150"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnSuma"
-        app:layout_constraintVertical_bias="0.200" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnPotencia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calcular potencia"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.150"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMulti"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/Resul"
@@ -91,6 +90,8 @@
         app:layout_constraintHorizontal_bias="0.150"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnPotencia"
-        app:layout_constraintVertical_bias="0.200" />
+        app:layout_constraintVertical_bias="0.100" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
