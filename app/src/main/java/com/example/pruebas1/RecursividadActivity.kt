@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.core.view.isInvisible
 
 class RecursividadActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -24,10 +25,16 @@ class RecursividadActivity : AppCompatActivity() {
         val btnSuma: Button = findViewById(R.id.btnSuma)
         val btnMulti: Button = findViewById(R.id.btnMulti)
         val btnPotencia: Button = findViewById(R.id.btnPotencia)
+        val btnProcedimiento: Button = findViewById(R.id.btnVerProc)
 
         val Num1: EditText = findViewById(R.id.Num1)
         val Num2: EditText = findViewById(R.id.Num2)
         val Resultado: TextView = findViewById(R.id.Resul)
+
+
+        val ResultadoProcedimiento: TextView = findViewById(R.id.TxtVProc)
+        val pasos = mutableListOf<String>()
+
 
 
         btnFactorial.setOnClickListener {
@@ -37,6 +44,15 @@ class RecursividadActivity : AppCompatActivity() {
             val recursividad = Recursividad()
             val resultado = recursividad.factorial(num1)
             Resultado.text = "Resultado: $resultado"
+
+            val resultadoProc = recursividad.factorialConProceso(num1, pasos)
+            val textoFinal = buildString {
+                append("Cálculo de $num1!\n\n")
+                pasos.forEach { append(it).append("\n") }
+                append("\nResultado final: $resultado")
+            }
+            ResultadoProcedimiento.text = textoFinal
+
         }
 
         btnSuma.setOnClickListener {
@@ -47,6 +63,7 @@ class RecursividadActivity : AppCompatActivity() {
             val recursividad = Recursividad()
             val resultado = recursividad.sumaRecursiva(num1, num2)
             Resultado.text = "Resultado: $resultado"
+
         }
 
         btnMulti.setOnClickListener {
@@ -68,10 +85,17 @@ class RecursividadActivity : AppCompatActivity() {
             val recursividad = Recursividad()
             val resultado = recursividad.potencia(num1, num2)
             Resultado.text = "Resultado: $resultado"
+
+
+
         }
 
+        btnProcedimiento.setOnClickListener{
 
+            if(ResultadoProcedimiento.isInvisible)
+            ResultadoProcedimiento.visibility = TextView.VISIBLE
+            else ResultadoProcedimiento.visibility = TextView.INVISIBLE
 
-
+        }
     }
 }
