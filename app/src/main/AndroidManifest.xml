@@ -15,7 +15,7 @@
             android:name=".DesarrolloActivity"
             android:exported="false" />
         <activity
-            android:name=".OpImaginarios"
+            android:name=".OpImaginariosActivity"
             android:exported="false" />
         <activity
             android:name=".OperacionesBasicas"

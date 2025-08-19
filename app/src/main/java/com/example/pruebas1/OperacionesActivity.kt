@@ -3,8 +3,6 @@ package com.example.pruebas1
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
-import android.widget.EditText
-import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -29,7 +27,7 @@ class OperacionesActivity : AppCompatActivity() {
 
 
         buttonComplejosActivity.setOnClickListener {
-            val intent = Intent(this, OpImaginarios::class.java)
+            val intent = Intent(this, OpImaginariosActivity::class.java)
             startActivity(intent)
         }
 
