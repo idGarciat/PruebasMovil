@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pruebas1">
         <activity
+            android:name=".OpImaginarios"
+            android:exported="false" />
+        <activity
+            android:name=".OperacionesBasicas"
+            android:exported="false" />
+        <activity
             android:name=".RecursividadActivity"
             android:exported="false" />
         <activity
