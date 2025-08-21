@@ -125,6 +125,13 @@ class RecursividadActivity : AppCompatActivity() {
 
         btnFractal.setOnClickListener {
 
+            val num1 = Num1.text.toString().toInt()
+
+            val recursividad = Recursividad()
+
+            Resultado.text = "${recursividad.fractal(num1)}"
+            ResultadoProcedimiento.text = recursividad.fractalconproceso(num1)
+
         }
 
         btnProcedimiento.setOnClickListener{

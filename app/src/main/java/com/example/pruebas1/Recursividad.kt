@@ -87,5 +87,35 @@ class Recursividad {
         }
     }
 
+    fun fractal(paso: Int, inicio: Double = 0.0, fin: Double = 1.0): List<Pair<Double, Double>> {
+        if (paso == 0) {
+            return listOf(Pair(inicio, fin))
+        }
+
+        val ter = (fin - inicio) / 3.0
+        val izq = fractal(paso - 1, inicio, inicio + ter)
+        val der = fractal(paso - 1, fin - ter, fin)
+
+        return izq + der
+    }
+
+    fun fractalconproceso(paso: Int): String {
+        val texto = StringBuilder()
+
+        for (i in 0..paso) {
+            val intervalo = fractal(i)
+            texto.append("C$i = ")
+            intervalo.forEachIndexed { index, interval ->
+                texto.append("[${interval.first}, ${interval.second}]")
+                if (index != intervalo.size - 1) texto.append(" ∪ ")
+            }
+            texto.append("\n")
+        }
+
+        return texto.toString()
+    }
+
+
+
 
 }
