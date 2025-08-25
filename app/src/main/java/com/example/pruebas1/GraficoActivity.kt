@@ -6,6 +6,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
+import android.graphics.Canvas
+import android.graphics.Color
+import android.graphics.Paint
+
+
 class GraficoActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,9 +24,11 @@ class GraficoActivity : AppCompatActivity() {
         }
         */
 
-        val miGrafico = Grafico(this)
-        setContentView(miGrafico)
+        //val miGrafico = Grafico(this)
+        //setContentView(miGrafico)
 
+        val cantor = GraficoCantor(this)
+        setContentView(cantor)
 
     }
 }
