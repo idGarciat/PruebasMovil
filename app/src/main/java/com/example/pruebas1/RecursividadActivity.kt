@@ -3,6 +3,7 @@ package com.example.pruebas1
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ScrollView
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -25,6 +26,8 @@ class RecursividadActivity : AppCompatActivity() {
         val btnSuma: Button = findViewById(R.id.btnSuma)
         val btnMulti: Button = findViewById(R.id.btnMulti)
         val btnPotencia: Button = findViewById(R.id.btnPotencia)
+
+        val btnFractal: Button = findViewById(R.id.btnFractal)
         val btnProcedimiento: Button = findViewById(R.id.btnVerProc)
 
         val Num1: EditText = findViewById(R.id.Num1)
@@ -33,6 +36,7 @@ class RecursividadActivity : AppCompatActivity() {
 
 
         val ResultadoProcedimiento: TextView = findViewById(R.id.TxtVProc)
+        val Scroll1: ScrollView = findViewById(R.id.scroll1)
         val pasos = mutableListOf<String>()
 
 
@@ -42,26 +46,36 @@ class RecursividadActivity : AppCompatActivity() {
             val num1 = Num1.text.toString().toInt()
 
             val recursividad = Recursividad()
-            val resultado = recursividad.factorial(num1)
-            Resultado.text = "Resultado: $resultado"
+
+//            val resultado = recursividad.factorial(num1)
 
             val resultadoProc = recursividad.factorialConProceso(num1, pasos)
             val textoFinal = buildString {
                 append("Cálculo de $num1!\n\n")
                 pasos.forEach { append(it).append("\n") }
-                append("\nResultado final: $resultado")
+                append("\nResultado: $resultadoProc")
             }
             ResultadoProcedimiento.text = textoFinal
+            Resultado.text = "Resultado: $resultadoProc"
+
 
         }
 
-        btnSuma.setOnClickListener {
-
+        btnPotencia.setOnClickListener {
             val num1 = Num1.text.toString().toInt()
             val num2 = Num2.text.toString().toInt()
 
+            val pasos = mutableListOf<String>()
+
             val recursividad = Recursividad()
-            val resultado = recursividad.sumaRecursiva(num1, num2)
+            val resultado = recursividad.potenciaConProceso(num1, num2, pasos)
+
+            val textoFinal = buildString {
+                append("$num1^$num2\n\n")
+                pasos.forEach { append(it).append("\n") }
+                append("\nResultado: $resultado")
+            }
+            ResultadoProcedimiento.text = textoFinal
             Resultado.text = "Resultado: $resultado"
 
         }
@@ -71,30 +85,60 @@ class RecursividadActivity : AppCompatActivity() {
             val num1 = Num1.text.toString().toInt()
             val num2 = Num2.text.toString().toInt()
 
+            val pasos = mutableListOf<String>()
+
+
             val recursividad = Recursividad()
-            val resultado = recursividad.multiRecursiva(num1, num2)
+            val resultado = recursividad.multiplicacionConProceso(num1, num2, pasos)
+
+            val textoFinal = buildString {
+                append("$num1 * $num2\n\n")
+                pasos.forEach { append(it).append("\n") }
+                append("\nResultado: $resultado")
+            }
+
+            ResultadoProcedimiento.text = textoFinal
             Resultado.text = "Resultado: $resultado"
 
         }
 
-        btnPotencia.setOnClickListener {
+        btnSuma.setOnClickListener {
 
             val num1 = Num1.text.toString().toInt()
             val num2 = Num2.text.toString().toInt()
 
+            val pasos = mutableListOf<String>()
+
             val recursividad = Recursividad()
-            val resultado = recursividad.potencia(num1, num2)
+            val resultado = recursividad.sumaConProceso(num1, num2, pasos)
+
+            val textoFinal = buildString {
+                append("$num1 + $num2\n\n")
+                pasos.forEach { append(it).append("\n") }
+                append("\nResultado: $resultado")
+            }
+
+            ResultadoProcedimiento.text = textoFinal
             Resultado.text = "Resultado: $resultado"
 
+        }
 
+        btnFractal.setOnClickListener {
+
+            val num1 = Num1.text.toString().toInt()
+
+            val recursividad = Recursividad()
+
+            Resultado.text = "${recursividad.fractal(num1)}"
+            ResultadoProcedimiento.text = recursividad.fractalconproceso(num1)
 
         }
 
         btnProcedimiento.setOnClickListener{
 
-            if(ResultadoProcedimiento.isInvisible)
-            ResultadoProcedimiento.visibility = TextView.VISIBLE
-            else ResultadoProcedimiento.visibility = TextView.INVISIBLE
+            if(Scroll1.isInvisible)
+                Scroll1.visibility = ScrollView.VISIBLE
+            else Scroll1.visibility = ScrollView.INVISIBLE
 
         }
     }

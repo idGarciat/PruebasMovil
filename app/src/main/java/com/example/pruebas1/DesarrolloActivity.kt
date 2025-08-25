@@ -29,7 +29,16 @@ class DesarrolloActivity : AppCompatActivity() {
         val btnDiv : Button = findViewById(R.id.buttonDivision)
 
         val Resultado : TextView = findViewById(R.id.txtResultado)
+        val Desarrollado : TextView = findViewById(R.id.txtDesarrollo)
 
+        btnSuma.setOnClickListener {
+
+            val operaciones = Operaciones()
+            val num1Value = Num1.text.toString().toInt()
+            val num2Value = Num2.text.toString().toInt()
+
+            Desarrollado.text = operaciones.buildAdditionString(num1Value, num2Value)
+        }
 
 
     }

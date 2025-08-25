@@ -102,9 +102,29 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonDivision"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ScrollView
+        android:id="@+id/scroll1"
+        android:layout_width="400dp"
+        android:layout_height="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.400"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtResultado"
+        app:layout_constraintVertical_bias="0.500">
+
+        <TextView
+            android:id="@+id/txtDesarrollo"
+            android:layout_width="400dp"
+            android:layout_height="400dp"
+            android:padding="20dp"
+            android:text="Desarrollo de la operación" />
 
 
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
