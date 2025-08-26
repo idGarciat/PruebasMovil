@@ -37,7 +37,7 @@ class DesarrolloActivity : AppCompatActivity() {
             val num1Value = Num1.text.toString().toInt()
             val num2Value = Num2.text.toString().toInt()
 
-            Desarrollado.text = operaciones.buildAdditionString(num1Value, num2Value)
+            //Desarrollado.text = operaciones.buildAdditionString(num1Value, num2Value)
         }
 
 
