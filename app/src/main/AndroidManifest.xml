@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pruebas1">
         <activity
+            android:name=".bdroom.NewBDRoomActivity"
+            android:exported="false" />
+        <activity
             android:name=".BDViewActivity"
             android:exported="false" />
         <activity
