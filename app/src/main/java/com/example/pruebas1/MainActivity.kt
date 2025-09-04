@@ -7,7 +7,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.pruebas1.CRUD.CRUDActivity
 import com.example.pruebas1.bdroom.NewBDRoomActivity
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         val buttongraficos : Button = findViewById(R.id.grafico)
         val buttonsalir : Button = findViewById(R.id.btnSalir)
         val btnBDRoom : Button = findViewById(R.id.btnBDRoom)
+        val brnCRUD : Button = findViewById(R.id.btnCRUD)
 
 
         boton1.setOnClickListener {
@@ -56,6 +59,11 @@ class MainActivity : AppCompatActivity() {
 
         btnBDRoom.setOnClickListener {
             val intent = Intent(this, NewBDRoomActivity::class.java)
+            startActivity(intent)
+        }
+
+        brnCRUD.setOnClickListener {
+            val intent = Intent(this, CRUDActivity::class.java)
             startActivity(intent)
         }
 
