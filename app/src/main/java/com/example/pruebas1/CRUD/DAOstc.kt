@@ -23,4 +23,7 @@ interface DAOstc {
     @Query("DELETE FROM Players WHERE id = :id")
     suspend fun DeletePlayer(id: Int)
 
+    @Query("SELECT * FROM Players WHERE username = :username LIMIT 1")
+    suspend fun GetPlayerByUsername(username: String): Player?
+
 }
