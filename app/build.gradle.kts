@@ -51,15 +51,27 @@ dependencies {
     implementation(libs.play.services.maps)
     
     //bdroom
-    implementation("androidx.room:room-runtime:2.6.1")
-    kapt("androidx.room:room-compiler:2.6.1")
-    implementation("androidx.room:room-ktx:2.6.1")
-    implementation ("com.squareup.picasso:picasso:2.8")
+    implementation("androidx.room:room-runtime:2.7.0")
+    kapt("androidx.room:room-compiler:2.7.0")
+    implementation("androidx.room:room-ktx:2.7.0")
     //bdroom
+
+
+    //Servicios web
+    implementation(libs.retrofit)
+    implementation(libs.converter.gson)
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor)
+    //Servicios web
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //Reactivo
+    implementation("io.reactivex.rxjava3:rxjava:3.1.8")
+    implementation("io.reactivex.rxjava3:rxandroid:3.0.2")
 
 
 }

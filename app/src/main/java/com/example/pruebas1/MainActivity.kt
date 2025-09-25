@@ -9,6 +9,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.pruebas1.CRUD.CRUDActivity
 import com.example.pruebas1.bdroom.NewBDRoomActivity
+import com.example.pruebas1.products.ProductsActivity
 
 
 class MainActivity : AppCompatActivity() {
@@ -63,7 +64,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         brnCRUD.setOnClickListener {
-            val intent = Intent(this, CRUDActivity::class.java)
+            val intent = Intent(this, ProductsActivity::class.java)
             startActivity(intent)
         }
 
