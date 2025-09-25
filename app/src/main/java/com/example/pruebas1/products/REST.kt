@@ -5,7 +5,7 @@ import retrofit2.Retrofit
 
 class REST {
     companion object {
-        val BASE_URL = "https://10.250.21.15910.250.21.159/products/"
+        val BASE_URL = "http://10.250.21.253:3000/"
 
         fun getRestEngine(): Retrofit {
             val interceptor = HttpLoggingInterceptor()
