@@ -12,7 +12,8 @@ import io.reactivex.rxjava3.core.Observable
 
 interface APIServices {
     @GET("products")
-    fun getAllProducts() : Call<List<Products>>
+    fun getAllProducts(): Observable<List<Products>>
+    //fun getAllProducts() : Call<List<Products>>
 
     @POST("products")
     fun insertProduct(@Body product: ProductDTO) : Call<Products>
@@ -22,10 +23,4 @@ interface APIServices {
 
     @DELETE("products/{id}")
     fun deleteProduct(@Path("id") id : Int) : Call<Int>
-}
-
-
-interface ApiService {
-    @GET("products") // Define la ruta de tu servicio
-    fun getAllProducts(): Observable<List<Products>> // Dato es el modelo que representa la respuesta
 }
