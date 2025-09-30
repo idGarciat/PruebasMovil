@@ -8,8 +8,11 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.pruebas1.CRUD.CRUDActivity
+import com.example.pruebas1.ServiciosWeb.WebMainActivity
 import com.example.pruebas1.bdroom.NewBDRoomActivity
 import com.example.pruebas1.products.ProductsActivity
+import com.example.pruebas1.webpackagessss.ClimaActivity
+import kotlin.jvm.java
 
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +40,10 @@ class MainActivity : AppCompatActivity() {
         val buttongraficos : Button = findViewById(R.id.grafico)
         val buttonsalir : Button = findViewById(R.id.btnSalir)
         val btnBDRoom : Button = findViewById(R.id.btnBDRoom)
-        val brnCRUD : Button = findViewById(R.id.btnCRUD)
+        val btnserviciosweb : Button = findViewById(R.id.btnServiciosWeb)
+        val btnCRUD : Button = findViewById(R.id.btnCRUD)
+        val btnProducts : Button = findViewById(R.id.btnProducts)
+        val btnclima : Button = findViewById(R.id.btnclima)
 
 
         boton1.setOnClickListener {
@@ -63,8 +69,23 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        brnCRUD.setOnClickListener {
+        btnserviciosweb.setOnClickListener {
+            val intent = Intent(this, WebMainActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnCRUD.setOnClickListener {
+            val intent = Intent(this, CRUDActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnProducts.setOnClickListener {
             val intent = Intent(this, ProductsActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnclima.setOnClickListener {
+            val intent = Intent(this, ClimaActivity::class.java)
             startActivity(intent)
         }
 

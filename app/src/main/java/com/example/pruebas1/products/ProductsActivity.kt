@@ -89,7 +89,7 @@ class ProductsActivity : AppCompatActivity() {
     }
 
     private fun observarDatos(apiService: APIServices) {
-        val observable = Observable.interval(5, 10, TimeUnit.SECONDS)
+        val observable = Observable.interval(5, 5, TimeUnit.SECONDS)
             .flatMap { apiService.getAllProducts() }
             .distinctUntilChanged()
             .subscribeOn(Schedulers.io())
