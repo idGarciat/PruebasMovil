@@ -33,18 +33,21 @@ class ClimaActivity : AppCompatActivity() {
 
         weatherClient = WeatherWebSocketClient()
 
-        disposable = weatherClient.connect("ws://192.168.0.181:8080")
+        disposable = weatherClient.connect("ws://192.168.100.40:8080")
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe(
                 { message ->
-                    // Extract weather type from message
-                    val weatherType = message.substringAfter(": ").trim()
-                    val emoji = getWeatherEmoji(weatherType)
-                    binding.textViewResult.text = "$emoji $weatherType"
+                    val weather = message.substringAfter("Clima actual: ").substringBefore(", Temperatura:").trim()
+                    val temperature = message.substringAfter("Temperatura: ").substringBefore("°C").trim()
+                    val tempValue = temperature.toIntOrNull() ?: 0
+                    binding.progressBarThermostat.progress = tempValue.coerceIn(0, 50)
+                    val emoji = getWeatherEmoji(weather)
+                    binding.textViewResult.text = "$emoji $weather ${temperature}°C"
                 },
                 { error -> binding.textViewResult.text = "❌ Error: ${error.message}" }
             )
+
 
     }
 
@@ -54,7 +57,7 @@ class ClimaActivity : AppCompatActivity() {
             "Nublado" -> "☁️"
             "Lluvioso" -> "🌧️"
             "Tormenta" -> "⛈️"
-            else -> "❓"
+            else -> "❓ Que es ese clima bro"
         }
     }
 
